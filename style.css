@@ -2,19 +2,40 @@
   margin: 0;
 }
 
+body {
+  font-family: "Computer Modern Sans", sans-serif;
+}
+
+.about-container {
+  width: 100%;
+}
+.about {
+  width: 80%;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: justify;
+  text-justify: inter-word;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.85);
+}
+
 .title-container {
   display: flex;
   justify-content: center;
 }
-.title-container>div {
+.title-container > div {
   width: 80%;
-  max-width: 500px;
+  max-width: 550px;
 }
-
+.title-container > div > h1 {
+  width: fit-content;
+  background: white;
+}
 .canvas-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  z-index: -1;
 }

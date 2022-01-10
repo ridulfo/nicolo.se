@@ -1,13 +1,15 @@
 var canvas = document.getElementById("canvas");
-width = window.innerWidth * 2;
-height = window.innerHeight * 10;
+width = window.innerWidth * 5;
+height = window.innerHeight * 3;
 canvas.width = width;
 canvas.height = height;
 var ctx = canvas.getContext("2d");
-const gridSize = 300;
-const grid = Array(height)
+const cellSize = 5;
+// Create a grid the size of the window/cellSize
+const grid = Array(parseInt(height / cellSize))
   .fill()
-  .map(() => Array(gridSize).fill(false));
+  .map(() => Array(parseInt(width / cellSize)).fill(false));
+console.log(grid);
 function rule(row) {
   // Rule 30
   const rules = {
@@ -42,16 +44,11 @@ function rule(row) {
   }
   return arr;
 }
-grid[0][gridSize / 2] = true;
-for (let y = 0; y < grid.length-1; y++) {
-  for (let x = 0; x < gridSize; x++) {
+grid[0][parseInt(grid[0].length / 2)] = true;
+for (let y = 0; y < grid.length - 1; y++) {
+  for (let x = 0; x < grid[y].length; x++) {
     if (grid[y][x])
-    ctx.fillRect(
-      (x * width) / gridSize,
-      (y * width) / gridSize,
-      width / gridSize,
-      width / gridSize
-      );
-    }
-    grid[y+1] = rule(grid[y]);
+      ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+  }
+  grid[y + 1] = rule(grid[y]);
 }
