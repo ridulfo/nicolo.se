@@ -18,7 +18,7 @@ body {
 }
 .title-container > h1 {
   width: fit-content;
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .blog-link {

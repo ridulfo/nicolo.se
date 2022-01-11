@@ -1,0 +1,25 @@
+{
+  "name": "nicolo.io",
+  "version": "1.0.0",
+  "description": "My portfolio website!",
+  "source": "src/index.html",
+  "scripts": {
+    "predeploy": "rm -rf dist/ && npx parcel build && cp CNAME dist",
+    "deploy": "npx run predeploy && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoloridulfo/nicolo.io.git"
+  },
+  "author": "Nicolo Ridulfo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicoloridulfo/nicolo.io/issues"
+  },
+  "homepage": "https://nicolo.io",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.1.1",
+    "typescript": "^4.5.4"
+  }
+}
