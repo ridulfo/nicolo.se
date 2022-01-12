@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "predeploy": "rm -rf dist/ && npx parcel build && cp CNAME dist",
-    "deploy": "npx run predeploy && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
