@@ -1,4 +1,4 @@
-Check out my [Blog 📝](https://www.blog.nicolo.io) !
+Check out my [Blog 📝](https://blog.nicolo.io) !
 
 Although I am at the beginning of my professional career, I have been programming since I was 12 years old. It all began with simple websites and text adventure games. I liked the challenge of learning new technologies and using them to build cool projects. Today, the only thing that has changed is the amount of experience I have. I’ve programmed in over a dozen languages in countless projects. Thanks to my broad knowledge, I am able to learn new technologies quickly and start providing value.
 
