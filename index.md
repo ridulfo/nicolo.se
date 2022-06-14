@@ -25,16 +25,9 @@ Outside of work I like spending time together with my girlfriend and puppy or fr
 
 ### Programming languages
 
-🧙 Grandmaster | ❤️ Favorites | 😊 proficient | 🔧 hobbist tinkerer
+My top programming languages based on my public github repositories.
 
-- Python 🧙 ️❤
-- Typescript ❤️
-- Javascript 😊
-- Java 😊
-- Visual Basic + VBScript 😊
-- C++ 🔧
-- C 🔧
-- Rust 🔧
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nicoloridulfo&langs_count=8&exclude_repo=blog)
 
 ### Spoken languages
 
@@ -50,6 +43,7 @@ Working as a full stack developer on a web application for alarm centers for one
 [Typescript, React, SIP, SignalR, Restful, C#, Docker, kubernetes]
 
 ### 2021 dec Winners of “HACTathon: AI for Gender Equality”
+
 Me and four other colleagues participated in [this hackathon](https://www.vinnova.se/en/events-calendar/2020/12/hactathon-ai-for-gender-equality/) and won. Our idea was to create a virtual meeting moderator that uses AI to distinguish who is speaking and display statistics on a dashboard in real time. We managed to implement a prototype which we live-demoed during the final presentation. Future development includes detecting over-talking and aggressive speaking. My contributions were mainly to the backend and machine learning based voice recognition.
 
 [Python, TypeScript, Voice recognition, Signal processing, React, Flask]
