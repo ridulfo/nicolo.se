@@ -12,13 +12,14 @@ Outside of work I like spending time together with my girlfriend and puppy or fr
 
 | dates               | position             | company                   |
 | ------------------- | -------------------- | ------------------------- |
-| 2021 Oct -          | Full-Stack developer | Svep Design Center        |
+| 2022 Jun -          | Full-Stack developer | Ingka IKEA                |
+| 2021 Oct - 2022 Jun | Full-Stack developer | Svep Design Center        |
 | 2021 Oct -          | Consultant           | Neodev                    |
 | 2019 Mar - 2021 Jul | Developer            | Lån och Spar bank Sverige |
 
 ### Education
 
-| dates          | diploma         | name                             | Institution       |
+| dates          | diploma         | name                             | institution       |
 | -------------- | --------------- | -------------------------------- | ----------------- |
 | 2018 – 2021    | Bachelor Degree | Computer Science and engineering | Lund's University |
 | 2018 Jan - Jun | 30hp            | Course in Statistics             | Lund's University |
@@ -37,18 +38,18 @@ My top programming languages based on my public github repositories.
 
 ## Assignments/Project Experience
 
-### 2021 oct - Full-Stack developer at Svep Design Center
+### 2021 Oct - 2022 Jun Full-Stack developer at Svep Design Center
 
-Working as a full stack developer on a web application for alarm centers for one of Svep’s clients. This project involved a great deal of refactoring of the codebase and implementing an ever changing set of requirements. When mere seconds can determine life or death, a lot of effort has to be put in making sure that the operators are able to work as effectively as possible. This type of system has to be performant and fault tolerant. Our team consists of me, one other Neodev and four Svep employees. We work closely with Svep’s client in order to integrate our platform with their legacy systems.
+Worked as a full stack developer on a web application for alarm centers for one of Svep’s clients. This project involved a great deal of refactoring of the codebase and implementing an ever changing set of requirements. When mere seconds can determine life or death, a lot of effort has to be put in making sure that the operators are able to work as effectively as possible. This type of system has to be performant and fault tolerant. Our team consisted of me, one colleague from Neodev and four Svep employees. We worked closely with Svep’s client in order to integrate our platform with their legacy systems.
 [Typescript, React, SIP, SignalR, Restful, C#, Docker, kubernetes]
 
-### 2021 dec Winners of “HACTathon: AI for Gender Equality”
+### 2021 Dec Winners of “HACTathon: AI for Gender Equality”
 
 Me and four other colleagues participated in [this hackathon](https://www.vinnova.se/en/events-calendar/2020/12/hactathon-ai-for-gender-equality/) and won. Our idea was to create a virtual meeting moderator that uses AI to distinguish who is speaking and display statistics on a dashboard in real time. We managed to implement a prototype which we live-demoed during the final presentation. Future development includes detecting over-talking and aggressive speaking. My contributions were mainly to the backend and machine learning based voice recognition.
 
 [Python, TypeScript, Voice recognition, Signal processing, React, Flask]
 
-### 2021 jun - sept Quantitative Trading
+### 2021 Jun - sept Quantitative Trading
 
 After graduating from Lund’s University I decided to dedicate three months to trading on the stock market. The main goal of the project was to beat a benchmark index (OMXS30), which was successfully accomplished. Firstly, an automated data collection system was created. Forums, financial websites and APIs were frequently scraped and the data added to a database. Thereafter, the data was analyzed using various models, one of which a KNN (see link below). In addition to beating the benchmark, one other goal of the project was to only trade systematically. Meaning that all the buy and sell decisions would be made by algorithms without human interference. This was not accomplished due to the time constraint. Instead, I made all the trading decisions using charts and the models’ outputs.
 
