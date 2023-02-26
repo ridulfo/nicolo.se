@@ -82,8 +82,8 @@ Other
 
 <style>
 p {
-  max-width: 100%;
-  width: 400px;
+  /* max-width: 100%;
+  width: 400px; */
   text-align: justify;
   text-justify: inter-word;
 }
