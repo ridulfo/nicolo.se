@@ -19,13 +19,14 @@ Outside of work I like spending time together with my girlfriend and puppy or fr
     section Employer
     Dreamwork                        :2019-02-01, 2021-01-01
     Lån och Spar bank Sverige        :2021-01-01, 2021-07-01
-    Quantitative Trading             :2021-07-01, 2021-10-01 
+    Self-employed                    :2021-07-01, 2021-10-01 
     Neodev                           :2021-10-01, 2023-03-01
     section Assignments
     Lån och Spar bank Sverige        :2019-02-01, 2021-01-01
     Svep Design Center               :2021-10-01, 2022-06-01
     Ingka IKEA                       :2022-06-01, 2023-03-01
 </code></pre>
+<em>This chart is a [MermaidJs chart](https://mermaid.js.org). I managed to render it from code by adding some javascript (see bottom of [file](https://github.com/nicoloridulfo/nicolo.io/blob/main/index.md))</em>
 
 | dates               | position                        | company                   |
 | ------------------- | ------------------------------- | ------------------------- |
@@ -101,8 +102,6 @@ Other
 
 <style>
 p {
-  /* max-width: 100%;
-  width: 400px; */
   text-align: justify;
   text-justify: inter-word;
 }
