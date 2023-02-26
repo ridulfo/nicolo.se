@@ -79,3 +79,12 @@ One of the courses I took during my studies was simply called “Project 3rd yea
 
 [Python, Flask, HTML Javascript, CSS, SQL, Scrum, SQLite]
 Other
+
+<style>
+p {
+  max-width: 100%;
+  width: 400px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
