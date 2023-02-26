@@ -10,12 +10,31 @@ Outside of work I like spending time together with my girlfriend and puppy or fr
 
 ### Employment History
 
-| dates               | position             | company                   |
-| ------------------- | -------------------- | ------------------------- |
-| 2022 Jun -          | Full-Stack developer | Ingka IKEA                |
-| 2021 Oct - 2022 Jun | Full-Stack developer | Svep Design Center        |
-| 2021 Oct -          | Consultant           | Neodev                    |
-| 2019 Mar - 2021 Jul | Developer            | Lån och Spar bank Sverige |
+<pre><code class="language-mermaid">gantt
+    title Employment History
+    dateFormat  YYYY-MM-DD
+    section Education
+    Course in Statistics             :2018-01-01, 2018-06-01
+    Computer Science and engineering :2018-06-01, 2021-06-01
+    section Employer
+    Dreamwork                        :2019-02-01, 2021-01-01
+    Lån och Spar bank Sverige        :2021-01-01, 2021-07-01
+    Quantitative Trading             :2021-07-01, 2021-10-01 
+    Neodev                           :2021-10-01, 2023-03-01
+    section Assignments
+    Lån och Spar bank Sverige        :2019-02-01, 2021-01-01
+    Svep Design Center               :2021-10-01, 2022-06-01
+    Ingka IKEA                       :2022-06-01, 2023-03-01
+</code></pre>
+
+| dates               | position                        | company                   |
+| ------------------- | ------------------------------- | ------------------------- |
+| 2022 Jun -          | Full-Stack developer Consultant | Ingka IKEA                |
+| 2021 Oct - 2022 Jun | Full-Stack developer Consultant | Svep Design Center        |
+| 2021 Oct -          |                                 | Neodev                    |
+| 2021 Jan - 2021 Jul | Developer                       | Lån och Spar bank Sverige |
+| 2019 Feb - 2021 Jan | Developer Consultant            | Lån och Spar bank Sverige |
+| 2019 Feb - 2021 Jan |                                 | Dreamwork                 |
 
 ### Education
 
@@ -88,3 +107,16 @@ p {
   text-justify: inter-word;
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.js"></script>
+<script>
+var config = {
+    startOnLoad:true,
+    theme: 'forest',
+    flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true
+        }
+};
+mermaid.initialize(config);
+window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
