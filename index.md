@@ -106,7 +106,7 @@ p {
   text-justify: inter-word;
 }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
 var config = {
     startOnLoad:true,
