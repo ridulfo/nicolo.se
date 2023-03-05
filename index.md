@@ -26,7 +26,7 @@ Outside of work I like spending time together with my girlfriend and puppy or fr
     Svep Design Center               :2021-10-01, 2022-06-01
     Ingka IKEA                       :2022-06-01, 2023-03-01
 </code></pre>
-<em>This chart is a [MermaidJs chart](https://mermaid.js.org). I managed to render it from code by adding some javascript (see bottom of [file](https://github.com/nicoloridulfo/nicolo.io/blob/main/index.md))</em>
+<em>This chart is a [MermaidJs chart](https://mermaid.js.org). I managed to render it from code by adding some javascript (see bottom of [file](https://github.com/ridulfo/nicolo.io/blob/main/index.md))</em>
 
 | dates               | position                        | company                   |
 | ------------------- | ------------------------------- | ------------------------- |
@@ -48,7 +48,7 @@ Outside of work I like spending time together with my girlfriend and puppy or fr
 
 My top programming languages based on my public github repositories.
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nicoloridulfo&langs_count=8&exclude_repo=blog)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ridulfo&langs_count=8&exclude_repo=blog)
 
 ### Spoken languages
 
