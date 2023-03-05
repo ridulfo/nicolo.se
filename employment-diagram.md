@@ -1,6 +1,7 @@
 ```mermaid
 gantt
     title Employment History
+    todayMarker off
     dateFormat  YYYY-MM-DD
     section Education
     Course in Statistics             :2018-01-01, 2018-06-01
