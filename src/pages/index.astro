@@ -2,6 +2,7 @@
 import Experience from "../components/Experience.astro";
 import Jobs from "../components/Jobs.astro";
 import Education from "../components/Education.astro";
+import Centerer from "../components/Centerer.astro";
 ---
 
 <!DOCTYPE html>
@@ -43,11 +44,17 @@ import Education from "../components/Education.astro";
       <h2>Work Experience</h2>
       <img src="employment-diagram.svg" alt="Employment diagram" />
       <h3>Jobs</h3>
-      <Jobs />
+      <Centerer>
+        <Jobs />
+      </Centerer>
       <h3>Education</h3>
-      <Education />
+      <Centerer>
+        <Education />
+      </Centerer>
       <h3>Top Languages (on my github)</h3>
-      <img src="stats.svg" alt="Top languages" />
+      <Centerer>
+        <img src="stats.svg" alt="Top languages" />
+      </Centerer>
 
       <h2>Experiences</h2>
       <Experience
