@@ -1,0 +1,5 @@
+astro/.astro/
+astro/dist
+astro/node_modules
+astro/.gitignore
+
