@@ -1,0 +1,239 @@
+---
+import Experience from "../components/Experience.astro";
+import Jobs from "../components/Jobs.astro";
+import Education from "../components/Education.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="generator" content={Astro.generator} />
+    <title>nicolo.io</title>
+  </head>
+  <body>
+    <main>
+      <h3>Check out my <a href="https://blog.nicolo.io">Blog 📝</a>!</h3>
+      <h1>nicolo.io</h1>
+      <p>
+        I'm a tech enthusiast who loves nothing more than using innovative tools
+        to build something from scratch. I've been doing it since I was a kid,
+        starting with simple websites and text adventure games. Now I have
+        experience in a wide range of technologies and countless projects under
+        my belt.
+      </p>
+      <p>
+        What I value most in software development is cooperation and shared
+        understanding. I believe that working together and keeping the bigger
+        picture in mind is essential for success. That's why I'm always
+        available to discuss, brainstorm new ideas and answer questions. I'm not
+        afraid to step outside my comfort zone to gain a deeper understanding of
+        the task at hand.
+      </p>
+      <p>
+        When I'm not coding, I love spending time with my girlfriend and our
+        furry friend, or hanging out with friends and family. I'm also an avid
+        reader of scientific articles and tech-blogs that inspire me to turn
+        ideas into coding projects. You might find me running a race or hitting
+        the dog park on a sunny weekend.
+      </p>
+
+      <h2>Work Experience</h2>
+      <img src="employment-diagram.svg" alt="Employment diagram" />
+      <h3>Jobs</h3>
+      <Jobs />
+      <h3>Education</h3>
+      <Education />
+      <h3>Top Languages (on my github)</h3>
+      <img src="/stats.svg" alt="Top languages" />
+
+      <h2>Experiences</h2>
+      <Experience
+        title="Full-Stack Developer"
+        company="Svep"
+        location="Malmö, Sweden"
+        startDate="2021 Oct"
+        endDate="2022 Jun"
+        technologies={[
+          "Typescript",
+          "React",
+          "SIP",
+          "SignalR",
+          "Restful",
+          "C#",
+          "Docker",
+          "kubernetes",
+        ]}
+      >
+        Worked as a full stack developer on a web application for alarm centers
+        for one of Svep's clients. This project involved a great deal of
+        refactoring of the codebase and implementing an ever changing set of
+        requirements. When mere seconds can determine life or death, a lot of
+        effort has to be put in making sure that the operators are able to work
+        as effectively as possible. This type of system has to be performant and
+        fault tolerant. Our team consisted of me, one colleague from Neodev and
+        four Svep employees. We worked closely with Svep's client in order to
+        integrate our platform with their legacy systems.
+      </Experience>
+      <Experience
+        title="Winners of HACTathon AI for Gender Equality"
+        company="Neodev"
+        location="Malmö, Sweden"
+        startDate="2021 Dec"
+        endDate="2021 Dec"
+        technologies={[
+          "Python",
+          "TypeScript",
+          "Voice recognition",
+          "Signal processing",
+          "React",
+          "Flask",
+        ]}
+      >
+        Me and four other colleagues participated in this
+        <a
+          href="https://www.vinnova.se/en/events-calendar/2020/12/hactathon-ai-for-gender-equality/"
+          >hackathon</a
+        > - and won! Our idea was to create a virtual meeting moderator that uses
+        AI to distinguish who is speaking and display statistics on a dashboard in
+        real time. We managed to implement a prototype which we live-demoed during
+        the final presentation. Future development includes detecting over-talking
+        and aggressive speaking. My contributions were mainly to the backend and
+        machine learning based voice recognition.
+      </Experience>
+      <Experience
+        title="Quantitative Trading"
+        company="Personal project"
+        location="Malmö, Sweden"
+        startDate="2021 Jun"
+        endDate="2021 Sep"
+        technologies={[
+          "Python",
+          "Jupyterlab",
+          "MongoDB",
+          "Machine learning (KNN, Linear Regression)",
+        ]}
+        references={[
+          {
+            name: "Link to my blogpost",
+            url: "https://blog.nicolo.io/finance/analysis/2021/07/09/Support-Resistance.html",
+          },
+        ]}
+      >
+        After graduating from Lund's University I decided to dedicate three
+        months to trading on the stock market. The main goal of the project was
+        to beat a benchmark index (OMXS30), which was successfully accomplished.
+        Firstly, an automated data collection system was created. Forums,
+        financial websites and APIs were frequently scraped and the data added
+        to a database. Thereafter, the data was analyzed using various models,
+        one of which a KNN (see link below). In addition to beating the
+        benchmark, one other goal of the project was to only trade
+        systematically. Meaning that all the buy and sell decisions would be
+        made by algorithms without human interference. This was not accomplished
+        due to the time constraint. Instead, I made all the trading decisions
+        using charts and the models' outputs. [Python, Jupyterlab, MongoDB,
+        Machine learning (KNN, Linear Regression)] Link to my blogpost
+      </Experience>
+      <Experience
+        title="Software Developer"
+        company="Lån och Spar Bank Sverige"
+        location="Malmö, Sweden"
+        startDate="2019 Jan"
+        endDate="2021 Jun"
+        technologies={[
+          "Java",
+          "Python",
+          "Javascript",
+          "VBScript",
+          "MongoDB",
+          "HTML",
+          "CSS",
+          "MongoDB",
+          "JavaFX",
+          "Flask",
+        ]}
+      >
+        My principal task was to create and maintain automated routines which
+        make up a large part of the day to day operations of the bank. This was
+        done through robotic process automation (RPA). The automation included
+        everything from the verification of applicants' documents, generating
+        and sending documents to the clients, paying out loans, to name a few.
+        Furthermore, I also developed a lot of in-house tooling and systems. One
+        of these systems became the core of all the automation and is to this
+        day responsible for the routing of tasks to worker nodes and task
+        life-cycle management.
+      </Experience>
+      <Experience
+        title="Bachelor Thesis"
+        company="Lund University"
+        location="Helsingborg, Sweden"
+        startDate="2021 Jan"
+        endDate="2021 Jun"
+        technologies={[
+          "Python",
+          "Jupyterlab",
+          "LR",
+          "KNN",
+          "DNN",
+          "CNN",
+          "LSTM",
+        ]}
+        references={[
+          {
+            name: "Link to thesis",
+            url: "http://lup.lub.lu.se/student-papers/record/9065850",
+          },
+        ]}
+      >
+        Our bachelor thesis consisted in analyzing the performance of various
+        machine learning models on the prediction of local minimums and maximums
+        in the historical price data of stocks in the S&P 500 composite index.
+        The results showed that deep neural networks easily outperformed
+        classical models such as Logistic Regression (LR) and the K-Nearest
+        Neighbors algorithm (KNN). With the recurrent neural network “Long
+        short-term memory” (LSTM) coming out on top.
+      </Experience>
+    </main>
+  </body>
+</html>
+<style is:global>
+  body {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: #fbf5e6;
+    color: #4b4f4b;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+    border-top-color: gray;
+    text-indent: initial;
+  }
+  table th,
+  table tr td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+  }
+  tr:nth-child(2n) {
+    background-color: #f6f8fa50;
+  }
+  table tr {
+    background-color: #ffffff50;
+  }
+  a {
+    color: #649b62;
+  }
+</style>

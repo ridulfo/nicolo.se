@@ -1,0 +1,55 @@
+---
+export interface Props {
+  title: string;
+  company: string;
+  startDate: string;
+  endDate?: string;
+  location: string;
+  technologies: string[];
+  references?: {
+    name: string;
+    url: string;
+  }[];
+}
+const {
+  title,
+  company,
+  startDate,
+  endDate,
+  location,
+  technologies,
+  references,
+} = Astro.props;
+---
+
+<h3>{title}</h3>
+<ul>
+  <li>
+    {startDate}
+    {endDate && `- ${endDate}`}
+    <li>{company} in {location}</li>
+    <li>{technologies.sort().join(", ")}</li>
+  </li>
+  <slot />
+  <p>
+    <ul>
+      {
+        references?.map((reference) => (
+          <li>
+            <a href={reference.url}>{reference.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </p>
+  <style>
+    h3 {
+      margin-bottom: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 0;
+    }
+  </style>
+</ul>
