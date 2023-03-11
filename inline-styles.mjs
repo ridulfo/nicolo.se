@@ -19,7 +19,20 @@ await Promise.all(
         )[1];
         const style = await fs.readFile(distPath + stylePath, "utf-8");
         html = html.replace(stylesheet, `<style>${style.trim()}</style>`);
-      })
+      }) || []
+    );
+    const svgs = html.match(/<img src="(.+?\.svg)" alt="(.+?)" ?\/?>/g); // extract SVG links
+    await Promise.all(
+      // read SVG files and replace link by inline SVG
+      svgs.map(async (image) => {
+        const imagePath = image.match(/^<img src="(.+?\.svg)" alt="(.+?)" ?\/?>$/)[1];
+        const imageAlt = image.match(/^<img src="(.+?\.svg)" alt="(.+?)" ?\/?>$/)[2];
+        const svg = await fs.readFile(distPath+"/" + imagePath, "utf-8");
+        html = html.replace(
+          image,
+          `<span aria-hidden="true" role="img" alt="${imageAlt}">${svg.trim()}</span>`
+        );
+      }) || []
     );
     html = minify(html, { collapseWhitespace: true });
     await fs.writeFile(file, html);
