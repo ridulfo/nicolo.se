@@ -27,12 +27,12 @@ const {
   <li>
     {startDate}
     {endDate && `- ${endDate}`}
-    <li>{company} in {location}</li>
-    <li>{technologies.sort().join(", ")}</li>
+    <li><b>{company}</b> in {location}</li>
+    <li class="smaller">{technologies.sort().join(", ")}</li>
   </li>
   <slot />
   <p>
-    <ul>
+    <ul class="smaller">
       {
         references?.map((reference) => (
           <li>
@@ -50,6 +50,9 @@ const {
       list-style-type: none;
       padding: 0;
       margin-top: 0;
+    }
+    .smaller{
+      font-size: 0.8em;
     }
   </style>
 </ul>
