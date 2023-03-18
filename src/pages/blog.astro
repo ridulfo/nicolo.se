@@ -2,20 +2,41 @@
 import Main from "@layouts/MainLayout.astro";
 
 const files = await Astro.glob("./blog/*.md");
-const posts = files.map((file) => [file.getHeadings()[0].text, file.url]).reverse();
+const posts = files
+  .map((file) => ({
+    postName: file.getHeadings()[0].text,
+    date: file.file
+      .split("/")
+      .reduce((acc, curr) => curr, "")
+      .split("-")
+      .slice(0, 3)
+      .join("-"),
+    url: file.url,
+  }))
+  .reverse();
 ---
 
 <Main>
-    <h1 style="margin-top:0"><a href="/">nicolo.io</a></h1>
-    <h2>Blog</h2>
-    <p>Here are some posts I've written:</p>
-    <ul>
-      {
-        posts.map((post) => (
-          <li>
-            <a href={post[1]}>{post[0]}</a>
-          </li>
-        ))
-      }
-    </ul>
+  <h1 style="margin-top:0"><a href="/">nicolo.io</a></h1>
+  <h2>Blog</h2>
+  <p>Here are some posts I've written:</p>
+
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          {post.date} - <a href={post.url}>{post.postName}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 1rem;
+    }
+  </style>
 </Main>

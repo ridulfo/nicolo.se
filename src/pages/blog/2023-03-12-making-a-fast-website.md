@@ -30,14 +30,14 @@ The images that I am going to show below are form the "network tab" in the devel
 This is what my website looked like back then.
 
 **Initial**
-![Initial](2023-03-12-making-a-fast-website/initial.jpg)
+![Initial](/blog/2023-03-12-making-a-fast-website_files/initial.jpg)
 As you can see there are a lot of request being made. Comparing it to [page-weight statistics](https://httparchive.org/reports/page-weight) from the httparchive it wasn't that heavy to begin with. The only issue is that there was not a lot of content on the website to justify the 1M size.
 This was mainly due to `mermaid.js`. This one library was about 200 times heavier than the actual content itself. It is a library used to convert [mermaid.js](https://mermaid.js.org) diagrams to SVG on the client.
 
 I noticed that the mermaid library that I was using was not minified. Looking around I managed to find a minified version of the library. This is what it looked like after minification.
 
 **Minified Mermaid**
-![Minified mermaid](2023-03-12-making-a-fast-website/minified_mermaid.jpg)
+![Minified mermaid](/blog/2023-03-12-making-a-fast-website_files/minified_mermaid.jpg)
 
 This managed to reduce the size of the library a bit, but there was still a lot of room for improvement.
 
@@ -50,7 +50,7 @@ I realized that if I wanted to become **fast** I needed to ditch github's markdo
 The website was rewritten in HTML and CSS. I also decided to pre-render the mermaid diagrams to SVG. This way I could just include the SVG in the HTML and not have to worry about the client needing to download the whole library and rendering the diagram.
 
 **HTML and SVGs**
-![HTML and SVG](2023-03-12-making-a-fast-website/html_svg.jpg)
+![HTML and SVG](/blog/2023-03-12-making-a-fast-website_files/html_svg.jpg)
 
 This was the biggest improvement in performance that I made. Now the whole website weighted about 25kb. The size was reduced 50 fold.
 
@@ -58,19 +58,19 @@ During the conversion to HTML I pulled in Open Sans from google fonts to replace
 I tried first hosting the fonts together with the other files. Which removed the extra fetching of the css file, but now the font was many times heavier than before. As can be seen in the image below, the font request has a large portion of the bar that is blue, meaning that it is spending almost half the time downloading.
 
 **Local Font**
-![Local font](2023-03-12-making-a-fast-website/local_font.jpg)
+![Local font](/blog/2023-03-12-making-a-fast-website_files/local_font.jpg)
 
 I ended up styling a web-safe font to look like Open Sans. This way I could get rid of the extra request and can celebrate a boot in performance.
 
 **No font**
-![no font](2023-03-12-making-a-fast-website/no_font.jpg)
+![no font](/blog/2023-03-12-making-a-fast-website_files/no_font.jpg)
 
 The website size had decrease to 8kb! A 150 fold improvement from the start. However, the total load time was the same because there were still a lot of different requests being made.
 
 At time point, the website is basically a html file that loads in two svg. A nice thing about SVGs is that they can be inlined. Meaning that everything can be bundled into a single file. This is what I did next.
 
 **Final (?)**
-![final](2023-03-12-making-a-fast-website/final.jpg)
+![final](/blog/2023-03-12-making-a-fast-website_files/final.jpg)
 
 After manually inlining the SVGs, the website is now a single html file!
 
@@ -100,7 +100,7 @@ This was not ideal, it would be going back to how it was before.
 To remedy this I added a [script](https://github.com/ridulfo/nicolo.io/blob/main/inline-styles.mjs) that at build time would inline all the css and svg files into the html file. A nice feature was that it also minified everything making the final index.html smaller!
 
 **Astro**
-![Astro](2023-03-12-making-a-fast-website/astro.jpg)
+![Astro](/blog/2023-03-12-making-a-fast-website_files/astro.jpg)
 
 The website was actually smaller after adding the framework (mostly thanks to the minifier).
 

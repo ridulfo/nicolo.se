@@ -149,3 +149,4 @@ for symbol, insId in progress:
     if len(df)>0:
         daily.insert_many(df.to_dict('records'))
 ```
+

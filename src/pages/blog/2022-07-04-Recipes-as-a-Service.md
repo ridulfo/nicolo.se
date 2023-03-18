@@ -627,19 +627,19 @@ plt.show()
 
 
     
-![png](2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_0.png)
+![png](/blog/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_0.png)
     
 
 
 
     
-![png](2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_1.png)
+![png](/blog/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_1.png)
     
 
 
 
     
-![png](2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_2.png)
+![png](/blog/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_2.png)
     
 
 
@@ -653,3 +653,4 @@ This notebook looked solely at different algorithm to find ingredients in common
 The only problem with the `group of groups` approach is that it is slow as it uses the brute force method to find small groups. This was mostly done for algorithm simplicity, but could easily be changed to a `pick one, then pick a similar one` approach.
 
 Further research will be conducted on methods for finding shared ingredients using other metrics.
+
