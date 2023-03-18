@@ -1,0 +1,14 @@
+---
+import MainLayout from "./MainLayout.astro";
+---
+
+<MainLayout>
+  <h1 style="margin-top:0"><a href="/blog">nicolo.io/blog</a></h1>
+  <slot />
+  <style is:global>
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</MainLayout>

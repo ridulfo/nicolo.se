@@ -10,7 +10,8 @@ const files = await globby(`${distPath}/**/*.html`);
 await Promise.all(
   files.map(async (file) => {
     let html = await fs.readFile(file, "utf-8"); // load HTML
-    const stylesheets = html.match(/<link rel="stylesheet" href="(.+?)" \/>/g); // extract stylesheet links
+    const stylesheets =
+      html.match(/<link rel="stylesheet" href="(.+?)" \/>/g) || []; // extract stylesheet links
     await Promise.all(
       // read CSS files and replace link by inline CSS
       stylesheets.map(async (stylesheet) => {
@@ -21,13 +22,17 @@ await Promise.all(
         html = html.replace(stylesheet, `<style>${style.trim()}</style>`);
       }) || []
     );
-    const svgs = html.match(/<img src="(.+?\.svg)" alt="(.+?)" ?\/?>/g); // extract SVG links
+    const svgs = html.match(/<img src="(.+?\.svg)" alt="(.+?)" ?\/?>/g) || []; // extract SVG links
     await Promise.all(
       // read SVG files and replace link by inline SVG
       svgs.map(async (image) => {
-        const imagePath = image.match(/^<img src="(.+?\.svg)" alt="(.+?)" ?\/?>$/)[1];
-        const imageAlt = image.match(/^<img src="(.+?\.svg)" alt="(.+?)" ?\/?>$/)[2];
-        const svg = await fs.readFile(distPath+"/" + imagePath, "utf-8");
+        const imagePath = image.match(
+          /^<img src="(.+?\.svg)" alt="(.+?)" ?\/?>$/
+        )[1];
+        const imageAlt = image.match(
+          /^<img src="(.+?\.svg)" alt="(.+?)" ?\/?>$/
+        )[2];
+        const svg = await fs.readFile(distPath + "/" + imagePath, "utf-8");
         html = html.replace(
           image,
           `<span aria-hidden="true" role="img" alt="${imageAlt}">${svg.trim()}</span>`

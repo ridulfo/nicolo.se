@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="generator" content={Astro.generator} />
+    <title>nicolo.io</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+<style is:global>
+  body {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: #fbf5e6;
+    color: #4b4f4b;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+    border-top-color: gray;
+    text-indent: initial;
+  }
+  table th,
+  table tr td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+  }
+  tr:nth-child(2n) {
+    background-color: #f6f8fa50;
+  }
+  table tr {
+    background-color: #ffffff50;
+  }
+  a {
+    color: #649b62;
+  }
+  pre {
+    border: 1px solid #dfe2e5;
+    padding: 1em;
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+import Main from "@layouts/MainLayout.astro";
+
+const files = await Astro.glob("./blog/*.md");
+const posts = files.map((file) => [file.getHeadings()[0].text, file.url]).reverse();
+---
+
+<Main>
+    <h1 style="margin-top:0"><a href="/">nicolo.io</a></h1>
+    <h2>Blog</h2>
+    <p>Here are some posts I've written:</p>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={post[1]}>{post[0]}</a>
+          </li>
+        ))
+      }
+    </ul>
+</Main>
