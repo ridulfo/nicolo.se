@@ -216,7 +216,7 @@ It turns out that the cached search is not very effective in practice. Perhaps t
 This approach splits the work on multiple cores in order to parallelize the computation. It simply runs the brute force approach on multiple processes.
 
 One caveat of running multiprocessing in jupyter notebook is that the map function needs to be defined outside the notebook. Here is that function:
-```Python
+```python
 def pool_func(recipes):
     return (recipes, in_common(recipes2ingredients(recipes)))
 ```

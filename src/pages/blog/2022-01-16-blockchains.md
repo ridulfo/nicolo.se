@@ -142,7 +142,7 @@ n bytes   (ns): block body         : 76:n
 The index of the block in the chain, the previous block's hash, the hash of the body, the time when the block was created and the body. The header is of fixed size, always 76 bytes. However, the body has a variable size, but is easy to compute: `len(block)-76`.
 
 PyChain uses [struct](https://docs.python.org/3/library/struct.html) in order to encode and decode blocks.
-```Python
+```python
 import struct # a library to create C-style structs
 
 def encode_block(n: int, prev_hash: bytes, time: int, body: str):
@@ -192,7 +192,7 @@ print(struct.unpack("2I", b'{\x00\x00\x00\xc8\x01\x00\x00'))
 The format of a block is `I32s32sQ{len(body)}s`. Where `I`s are integers, `s`s are char arrays and `Q`s are unsigned longs. The number before the letter specifies how many of that type there are. Since the body has a variable number of `s`, it can be calculated using `{len(block)-76}s`.
 
 To add a block to the chain we simply: 
-```Python
+```python
 class BlockChain:
     blocks=[]
     HEADER_SLICE = slice(0, 76)

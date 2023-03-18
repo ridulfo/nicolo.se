@@ -5,7 +5,7 @@ layout: "@layouts/BlogLayout.astro"
 # Writing a LLVM compiler using Python
 
 Recently I have been fascinated by the world of compiled programming languages. My current day to day work mainly involves interpreted languages such as Python and TypeScript. These languages are great for productivity, but they leave a lot to be desired when it comes to performance and resource usage (see [benchmarks](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)). In order to learn more about compiled languages I started writing small programs in C++, go and Rust. Rust is awesome! In 13 lines of code a rust noob can managed to write a function that looks for a string (in lowercase and uppercase) inside of a SHA256 hash. The kicker, it is fully **parallel** thanks to the rayon library! This is usually not that easy to do in other system languages. The only difference between the single threaded and parallel code is `.into_par_iter()` part.
-```Rust
+```rust
 pub fn find_hash(name: &str) -> String {
     let name_upper = &name.to_uppercase();
     let result = (0u64..u64::MAX).into_par_iter().find_any(|&i| {
@@ -217,7 +217,7 @@ for op in code:
 
 ### Increment & Decrement
 There is a lot of code to unpack here. Let’s start with the `+` and `-` instructions.
-```Python
+```python
 val_at_ptr = builder.load(tape_ptr)
 builder.store(builder.add(
     val_at_ptr, ir.Constant(ir.IntType(8), 1)), tape_ptr)
@@ -230,13 +230,13 @@ store i8 %".7", i8* %".4"
 ```
 Remember that the pointer to the current element was `.4` It loads the value of the current element into `.6`, then add `1` to it and finally stores it where `.4` points.
 ### Move tape pointer
-```Python
+```python
 tape_ptr = builder.gep(tape_ptr, [ir.Constant(ir.IntType(8), 1)])
 ```
 To move the tape pointer, we simply use the get element pointer function. This is similar to incrementing a pointer in regular C, but the function handles all the logistics with how many bytes to jump.
 ### Loops
 #### For `[`:
-```Python
+```python
 blocks.append(builder.append_basic_block(block_namer()+"_open"))
 builder.branch(blocks[-1])
 builder = ir.IRBuilder(blocks[-1])
@@ -244,7 +244,7 @@ builder = ir.IRBuilder(blocks[-1])
 First, we create a new block and add it to the list of blocks. We make the current block branch to the new block unconditionally. This is because LLVM IR does not simply move to the next block after it has finished the instructions is the current block. It must explicitly be told to move to the block below (meh).
 
 #### For `]`:
-```Python
+```python
 val_at_ptr = builder.load(tape_ptr)
 branch_condition = builder.icmp_signed('==', val_at_ptr, ir.Constant(ir.IntType(8), 0))
 open_block = blocks.pop()
@@ -294,7 +294,7 @@ We want to be able to print the current element's value to stdout. In order to d
 Since I am writing this on a ARM64, that is the syscall table I have to look at. As I am writing this, I wanted to add a link to the syscall table for Darwin ARM64, but I cannot find any. During the development process I scoured various forums, blogs and source code files on github to piece together how to make the correct syscall. This might be the best [table](https://thog.github.io/syscalls-table-aarch64/latest.html) I have found. However, it does not fully work on my machine. Depending on who you ask, Darwin ARM64 either uses register X16 or X8 to specify what syscall to make and uses either the value `0x40` or `4` or `0x2000004` to specify that we want to write. I have no idea, I must have tried all combinations of registers and values.
 
 ### Making the syscall
-``` Python
+```python
 fty = ir.FunctionType(ir.IntType(32), [
     ir.IntType(32),  # x16 (=4)
     ir.IntType(32),  # x0 (=1)
@@ -316,7 +316,7 @@ First, we create a function type, it is basically a call signature. The assembly
 
 
 Luckily, the llvmlite library has a convenient way to write out values to the registers automatically without us having to move every value into the registers. We just specify the "constraint" ` "=r,{x16},{x0},{x1},{x2}"` and then pass the values in the args parameter 
-```Python
+```python
 ir.IntType(32)(4),
 ir.IntType(32)(1),
 tape_ptr,
@@ -326,7 +326,7 @@ ir.IntType(32)(1)
 The actual assembly is the `svc 0` instruction.
 
 I also implemented an exit instruction to BF that can be used by writing `e`. It makes an exit syscall.
-``` Python
+```python
 builder.asm(ir.FunctionType(ir.IntType(32),
     [ir.IntType(32), ir.IntType(32)]),
     "svc 0", "=r,{x0},{x16}",
