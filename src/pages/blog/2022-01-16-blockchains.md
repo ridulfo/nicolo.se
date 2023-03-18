@@ -220,7 +220,7 @@ The following step is to create a peer-to-peer protocol that would enable this b
 - get blocks (ask for blocks from peers)
 
 ### Appendix A
-Fun fact! The [current version of PyChain](https://github.com/nicoloridulfo/PyChain/tree/713a4a5a4e8055d1a127ff3d0c26f0b3efa737c7) can be minified and fit in 31 **unreadable** lines of code:
+Fun fact! The [current version of PyChain](https://github.com/ridulfo/PyChain/tree/713a4a5a4e8055d1a127ff3d0c26f0b3efa737c7) can be minified and fit in 31 **unreadable** lines of code:
 
 
 ```python

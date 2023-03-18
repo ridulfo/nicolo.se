@@ -9,7 +9,8 @@ layout: "@layouts/BlogLayout.astro"
 > For a large segment of internet users, waiting for a page that may never fully load breaks the promise of the internet even to the point of putting lives at risk during emergencies.
 >
 > A lot of energy is used to power data centers and the devices they serve. We can help reduce overall energy demands by keeping our file payloads smaller which also keeps payload transmission faster and more efficient.
-> https://almanac.httparchive.org/en/2021/page-weight
+
+> <cite>https://almanac.httparchive.org/en/2021/page-weight</cite>
 
 The internet has become heavier and heavier over the years. Developers pulling in random libraries and frameworks and not caring about the end user needing to download all that data. We need to return to simplicity.
 
