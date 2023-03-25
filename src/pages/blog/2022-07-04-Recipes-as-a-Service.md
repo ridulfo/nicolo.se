@@ -14,7 +14,7 @@ I have always had a hard time at planning a week's meals. It is trivial to rando
 
 In this post we explore various ways of finding recipes that have ingredients in common. Although this task might seem simple at first, it turns out that the problem has a factorial time complexity. Given 1000 recipes, finding pairs of recipes with many ingredients in common only requires you to check 500 000 combinations. While finding a triad would have you checking 166 000 000 combinations. A week (5 days = 5 recipes) is 8.25e16 combinations. The time complexity of this problem is in the order of `O(n!)`. Among time complexities, that is a tough one.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/1280px-Comparison_computational_complexity.svg.png | width=100px)
+<img style="width:100%;max-width:500px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/1280px-Comparison_computational_complexity.svg.png" alt="Graph of computational complexity growth, as N grows"/>
 
 As the introduction mentions, we do not only want to find recipes with ingredients in common, but also optimize for:
 
