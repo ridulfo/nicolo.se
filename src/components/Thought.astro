@@ -1,0 +1,24 @@
+---
+export interface Props {
+  title: string;
+  date: string;
+}
+const { title, date, body } = Astro.props;
+---
+
+<section>
+  <h3>{title}</h3>
+  <span>{date}</span>
+  <slot />
+</section>
+<style>
+  section {
+    max-width: 300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section h3 {
+    margin: 0;
+  }
+</style>

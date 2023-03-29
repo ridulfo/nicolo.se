@@ -1,0 +1,180 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import Centerer from "@components/Centerer.astro";
+import Education from "@components/Education.astro";
+import Experience from "@components/Experience.astro";
+import Jobs from "@components/Jobs.astro";
+---
+
+<MainLayout>
+  <p>
+    I'm a tech enthusiast who loves nothing more than using innovative tools to
+    build something from scratch. I've been doing it since I was a kid, starting
+    with simple websites and text adventure games. Now I have experience in a
+    wide range of technologies and countless projects under my belt.
+  </p>
+  <p>
+    What I value most in software development is cooperation and shared
+    understanding. I believe that working together and keeping the bigger
+    picture in mind is essential for success. That's why I'm always available to
+    discuss, brainstorm new ideas and answer questions. I'm not afraid to step
+    outside my comfort zone to gain a deeper understanding of the task at hand.
+  </p>
+  <p>
+    When I'm not coding, I love spending time with my girlfriend and our furry
+    friend, or hanging out with friends and family. I'm also an avid reader of
+    scientific articles and tech-blogs that inspire me to turn ideas into coding
+    projects. You might find me running a race or hitting the dog park on a
+    sunny weekend.
+  </p>
+
+  <h2>Work Experience</h2>
+  <img src="employment-diagram.svg" alt="Employment diagram" />
+  <h3>Jobs</h3>
+  <Centerer>
+    <Jobs />
+  </Centerer>
+  <h3>Education</h3>
+  <Centerer>
+    <Education />
+  </Centerer>
+  <h3>Top Languages (on my github)</h3>
+  <Centerer>
+    <img src="stats.svg" alt="Top languages" />
+  </Centerer>
+
+  <h2>Experiences</h2>
+  <Experience
+    title="Full-Stack Developer"
+    company="Svep"
+    location="Malmö, Sweden"
+    startDate="2021 Oct"
+    endDate="2022 Jun"
+    technologies={[
+      "Typescript",
+      "React",
+      "SIP",
+      "SignalR",
+      "Restful",
+      "C#",
+      "Docker",
+      "kubernetes",
+    ]}
+  >
+    Worked as a full stack developer on a web application for alarm centers for
+    one of Svep's clients. Accomplished extensive codebase refactoring and
+    adapted to a constantly evolving set of requirements. Ensured that the
+    platform could operate seamlessly in time-critical situations, where seconds
+    can mean the difference between life and death, by prioritizing efficiency
+    and effectiveness for the operators. Collaborated closely with the client to
+    integrate the platform with their legacy systems, in a team of six,
+    including a colleague from Neodev and four Svep employees.
+  </Experience>
+  <Experience
+    title="Winners of HACTathon AI for Gender Equality"
+    company="Neodev"
+    location="Malmö, Sweden"
+    startDate="2021 Dec"
+    endDate="2021 Dec"
+    technologies={[
+      "Python",
+      "TypeScript",
+      "Voice recognition",
+      "Signal processing",
+      "React",
+      "Flask",
+    ]}
+  >
+    Participated in <a
+      href="https://www.vinnova.se/en/events-calendar/2020/12/hactathon-ai-for-gender-equality/"
+      >Vinnova's HACTathon
+    </a> with four other colleagues and emerged as the winning team! Our idea was
+    to develop a virtual meeting moderator that utilized AI to identify speakers
+    and display real-time statistics on a dashboard. During the final presentation,
+    we demonstrated a working prototype of our solution. For future development,
+    we plan to enhance the AI to detect over-talking and aggressive speaking. As
+    for my role, I primarily focused on the backend and machine learning-based voice
+    recognition.
+  </Experience>
+  <Experience
+    title="Quantitative Trading"
+    company="Personal project"
+    location="Malmö, Sweden"
+    startDate="2021 Jun"
+    endDate="2021 Sep"
+    technologies={[
+      "Python",
+      "Jupyterlab",
+      "MongoDB",
+      "Machine learning (KNN, Linear Regression)",
+    ]}
+    references={[
+      {
+        name: "Link to my blogpost",
+        url: "https://nicolo.io/blog/2021-07-09-Support-Resistance/",
+      },
+    ]}
+  >
+    After graduating from Lund's University I decided to dedicate three months
+    to trading on the stock market. The main goal of the project was to beat a
+    benchmark index (OMXS30), which was successfully accomplished. Firstly, an
+    automated data collection system was created. Forums, financial websites and
+    APIs were frequently scraped and the data added to a database. Thereafter,
+    the data was analyzed using various models, one of which a KNN (see link
+    below). In addition to beating the benchmark, one other goal of the project
+    was to only trade systematically. Meaning that all the buy and sell
+    decisions would be made by algorithms without human interference. This was
+    not accomplished due to the time constraint. Instead, I made all the trading
+    decisions using charts and the models' outputs.
+  </Experience>
+  <Experience
+    title="Software Developer"
+    company="Lån och Spar Bank Sverige"
+    location="Malmö, Sweden"
+    startDate="2019 Jan"
+    endDate="2021 Jun"
+    technologies={[
+      "Java",
+      "Python",
+      "Javascript",
+      "VBScript",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "MongoDB",
+      "JavaFX",
+      "Flask",
+    ]}
+  >
+    My principal task was to create and maintain automated routines which make
+    up a large part of the day to day operations of the bank. This was done
+    through robotic process automation (RPA). The automation included everything
+    from the verification of applicants' documents, generating and sending
+    documents to the clients, paying out loans, to name a few. Furthermore, I
+    also developed a lot of in-house tooling and systems. One of these systems
+    became the core of all the automation and is to this day responsible for the
+    routing of tasks to worker nodes and task life-cycle management.
+  </Experience>
+  <Experience
+    title="Bachelor Thesis"
+    company="Lund University"
+    location="Helsingborg, Sweden"
+    startDate="2021 Jan"
+    endDate="2021 Jun"
+    technologies={["Python", "Jupyterlab", "LR", "KNN", "DNN", "CNN", "LSTM"]}
+    references={[
+      {
+        name: "Link to thesis",
+        url: "http://lup.lub.lu.se/student-papers/record/9065850",
+      },
+    ]}
+  >
+    Our bachelor thesis consisted in analyzing the performance of various
+    machine learning models on the prediction of local minimums and maximums in
+    the historical price data of stocks in the S&P 500 composite index. The
+    results showed that deep neural networks easily outperformed classical
+    models such as Logistic Regression (LR) and the K-Nearest Neighbors
+    algorithm (KNN). With the recurrent neural network “Long short-term memory”
+    (LSTM) coming out on top.
+  </Experience>
+</MainLayout>

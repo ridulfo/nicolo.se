@@ -1,5 +1,5 @@
 ---
-import Main from "@layouts/MainLayout.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 
 const files = await Astro.glob("./blog/*.md");
 const posts = files
@@ -7,7 +7,7 @@ const posts = files
     postName: file.getHeadings()[0].text,
     date: file.file
       .split("/")
-      .reduce((acc, curr) => curr, "")
+      .reduce((acc, curr) => curr, "") // last item in array
       .split("-")
       .slice(0, 3)
       .join("-"),
@@ -16,8 +16,7 @@ const posts = files
   .reverse();
 ---
 
-<Main>
-  <h1 style="margin-top:0"><a href="/">nicolo.io</a></h1>
+<MainLayout>
   <h2>Blog</h2>
   <p>Here are some posts I've written:</p>
 
@@ -39,4 +38,4 @@ const posts = files
       margin-bottom: 1rem;
     }
   </style>
-</Main>
+</MainLayout>
