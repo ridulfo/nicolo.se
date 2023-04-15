@@ -1,0 +1,32 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <section>
+    <h2>Projects</h2>
+    <h3><a href="https://time-since.nicolo.io">time-since.nicolo.io</a></h3>
+    Choose a date and time and optionally a title and the app will display the time
+    since that date. Share the count up timer by simply copying the URL and sending
+    to your friends or saving it by simply bookmarking it! The app is built with
+    svelte. Demo: <a
+      href="https://time-since.nicolo.io/?start=1681582800&title=Launch#display"
+      >time since launch</a
+    >.
+    <div>
+      Check it out on <a href="https://github.com/ridulfo/time-since">Github</a>
+    </div>
+    <br />
+  </section>
+</MainLayout>
+<style>
+  h3 {
+    margin-bottom: 0;
+  }
+  section {
+    max-width: 600px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
