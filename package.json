@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@mermaid-js/mermaid-cli": "^10.2.4",
     "astro": "^2.0.18",
     "astro-single-file": "^1.1.0"
   },
