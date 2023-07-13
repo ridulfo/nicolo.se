@@ -479,7 +479,7 @@ print("Total tokens:", total_tokens)
     Total tokens: 2639
 
 
-That was fast and quite accurate. Unfortunately, that is quite expensive. 2500 tokens costs about $0.004. It might now sound like much, but if we want to classify 1000 products, that would cost $4.
+That was fast and quite accurate. Unfortunately, that is quite expensive. 2500 tokens costs about $0.004. It might not sound like much, but if we want to classify 1000 products, that would cost $4.
 
 ### LLM + embedding approach
 What if we only used the LLM to clean up the text and then used the embedding approach to find the most similar description?
