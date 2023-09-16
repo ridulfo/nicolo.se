@@ -10,9 +10,9 @@ gantt
     Dreamwork                        :2019-02-01, 2021-01-01
     Lån och Spar bank Sverige        :2021-01-01, 2021-07-01
     Self-employed                    :2021-07-01, 2021-10-01 
-    Neodev                           :2021-10-01, 2023-07-01
+    Neodev                           :2021-10-01, 2023-09-16
     section Assignments
     Lån och Spar bank Sverige        :2019-02-01, 2021-01-01
     Svep Design Center               :2021-10-01, 2022-06-01
-    Ingka IKEA                       :2022-06-01, 2023-07-01
+    Ingka IKEA                       :2022-06-01, 2023-09-16
 ```
