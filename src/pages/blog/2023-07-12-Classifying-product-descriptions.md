@@ -20,6 +20,8 @@ The UNSPSC is a four-level hierarchy with the following levels:
 Given a product description, we want to categorize it according to the UNSPSC taxonomy.
 A notebook trying different approaches to categorizing product descriptions.
 
+<aside>This post is centered around various techniques that can be used to classify product descriptions. As always, in order to actually determine which approach is best, a good quantity of data is always required.</aside>
+
 ## Load UNSPSC codes
 Our dataset consists of `segment`, `family`, `class`, `commodity`. Each of these is a table of prefixes and descriptions. Where segment only specifies the first two digits of the code, family specifies the first four, class the first six and commodity the full eight digits. 
 
