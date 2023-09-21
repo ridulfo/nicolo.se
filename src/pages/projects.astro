@@ -5,18 +5,33 @@ import MainLayout from "@layouts/MainLayout.astro";
 <MainLayout>
   <section>
     <h2>Projects</h2>
+    <h3><a href="https://github.com/ridulfo/awk3">awk3</a></h3>
+    <p>
+      A search and replace tool for computed replaces. Imagine you want to find
+      all the font-size declarations in a css file that use <code>rem</code> and
+      want to to increase the font-size by <code>1.25x</code>. Using this
+      command line utility, this can be done using regex and python. This is how
+      it could be done:
+    </p>
+
+    <code>$ awk3 "(\d*.\d*)rem" "str(round(float(m[0])*1.25,3))+'rem"</code>
+    <hr />
+
     <h3><a href="https://time-since.nicolo.io">time-since.nicolo.io</a></h3>
-    Choose a date and time and optionally a title and the app will display the time
-    since that date. Share the count up timer by simply copying the URL and sending
-    to your friends or saving it by simply bookmarking it! The app is built with
-    svelte. Check it out on <a href="https://github.com/ridulfo/time-since"
-      >Github</a
-    >
-    Demo: <iframe
+    <p>
+      Choose a date and time and optionally a title and the app will display the
+      time since that date. Share the count up timer by simply copying the URL
+      and sending to your friends or saving it by simply bookmarking it! The app
+      is built with svelte. Check it out on <a
+        href="https://github.com/ridulfo/time-since">Github</a
+      >
+    </p>
+    <iframe
       style="height:300px;margin:auto;display:block;"
       src="https://time-since.nicolo.io/#/20230412-182000?title=Launch"
       >time since launch</iframe
     >.
+    <hr />
   </section>
 </MainLayout>
 <style>
