@@ -14,7 +14,7 @@ layout: "@layouts/BlogLayout.astro"
 
 The internet has become heavier and heavier over the years. Developers pulling in random libraries and frameworks and not caring about the end user needing to download all that data. We need to return to simplicity.
 
-With this as my guiding principle, I set out to make my [personal website](https://nicolo.io) as light as possible - without sacrificing on the esthetics. I will be sharing my journey and the tools I used to achieve this goal.
+With this as my guiding principle, I set out to make my [personal website](https://nicolo.se) as light as possible - without sacrificing on the esthetics. I will be sharing my journey and the tools I used to achieve this goal.
 
 **Disclaimer**: This blog is not optimized in any way yet. I am no role model (yet). I am just taking small steps to make it better.
 
@@ -98,7 +98,7 @@ A problem that I ran into was that building using Astro generated a directory th
 - SVG files
 
 This was not ideal, it would be going back to how it was before.
-To remedy this I added a [script](https://github.com/ridulfo/nicolo.io/blob/main/inline-styles.mjs) that at build time would inline all the css and svg files into the html file. A nice feature was that it also minified everything making the final index.html smaller!
+To remedy this I added a [script](https://github.com/ridulfo/nicolo.se/blob/main/inline-styles.mjs) that at build time would inline all the css and svg files into the html file. A nice feature was that it also minified everything making the final index.html smaller!
 
 **Astro**
 ![Astro](/blog/2023-03-12-making-a-fast-website_files/astro.jpg)
