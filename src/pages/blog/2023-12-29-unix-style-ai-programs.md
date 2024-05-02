@@ -48,7 +48,7 @@ options:
   -n N                  The number of results to return
 ```
 
-It simply takes a query and returns sections of text that are semantically similar. For more information check it out on [Github](https://github.com/ridulfo/sem-grep)
+It simply takes a query and returns sections of text that are semantically similar. For more information check it out on [Github](https://github.com/ridulfo/ai-tools).
 
 **Example:**
 
@@ -68,7 +68,7 @@ Here is [a great article](https://about.xethub.com/blog/you-dont-need-a-vector-d
 ## LLMs as a Unix program
 
 Now imagine you have a text file that you would like to have summarized. You would like to simply write `cat README.md | ai "Summarize this."`.
-That is possible with the other script that I created just called `ai`.
+That is possible with the other script that I created just called `ai`. More information about it here: [Github](https://github.com/ridulfo/ai-tools).
 
 ```
 > ai -h
