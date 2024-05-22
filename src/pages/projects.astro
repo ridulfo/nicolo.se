@@ -5,12 +5,23 @@ import MainLayout from "@layouts/MainLayout.astro";
 <MainLayout>
   <section>
     <h2>Projects</h2>
+    <h3><a href="https://github.com/ridulfo/nino-lang">nino-lang</a></h3>
+    <p>
+      Nino-lang is designed to be lightweight and efficient, with a focus on
+      essential features to enable a wide range of functionalities without
+      unnecessary complexity. The language is designed to support a minimal type
+      system, first-class functions, and arrays, and is permissive with side
+      effects, avoiding the need for monads. The full design has not been
+      implemented and the language is currently interpreted, but the ultimate
+      goal is to implement a self-hosting compiler. The project has reached a
+      state where it supports a modest set of language features.
+    </p>
     <h3><a href="https://github.com/ridulfo/ai-tools">ai-tools</a></h3>
     <p>
       A collection of AI-driven tools that follow the Unix philosophy. This
       makes them easily composable and incredibly powerful.
 
-      <br>
+      <br />
       <a href="https://nicolo.se/blog/2023-12-29-unix-style-ai-programs"
         >See this post for a demostration</a
       >
@@ -32,7 +43,7 @@ import MainLayout from "@layouts/MainLayout.astro";
       Choose a date and time and optionally a title and the app will display the
       time since that date. Share the count up timer by simply copying the URL
       and sending to your friends or saving it by simply bookmarking it! The app
-      is built with svelte. <br>Check it out on <a
+      is built with svelte. <br />Check it out on <a
         href="https://github.com/ridulfo/time-since">Github</a
       >.
     </p>
@@ -44,6 +55,7 @@ import MainLayout from "@layouts/MainLayout.astro";
     <hr />
   </section>
 </MainLayout>
+
 <style>
   h3 {
     margin-bottom: 0;
