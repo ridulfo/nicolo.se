@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/BlogLayout.astro"
+layout: "@layouts/TextsLayout.astro"
 ---
 
 # Recipes as a Service
@@ -627,19 +627,19 @@ plt.show()
 
 
     
-![png](/blog/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_0.png)
+![png](../../assets/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_0.png)
     
 
 
 
     
-![png](/blog/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_1.png)
+![png](../../assets/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_1.png)
     
 
 
 
     
-![png](/blog/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_2.png)
+![png](../../assets/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_2.png)
     
 
 

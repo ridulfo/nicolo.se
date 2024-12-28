@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/BlogLayout.astro"
+layout: "@layouts/TextsLayout.astro"
 ---
 
 # Downloading daily stock data

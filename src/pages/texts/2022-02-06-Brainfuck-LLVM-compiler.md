@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/BlogLayout.astro"
+layout: "@layouts/TextsLayout.astro"
 ---
 
 # Writing a LLVM compiler using Python

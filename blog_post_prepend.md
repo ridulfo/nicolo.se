@@ -1,4 +1,4 @@
 ---
-layout: "@layouts/BlogLayout.astro"
+layout: "@layouts/TextsLayout.astro"
 ---
 

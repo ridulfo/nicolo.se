@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/BlogLayout.astro"
+layout: "@layouts/TextsLayout.astro"
 ---
 
 # Classifying products according to UNSPSC using their descriptions

@@ -1,13 +1,13 @@
 ---
 import MainLayout from "@layouts/MainLayout.astro";
 
-const files = await Astro.glob("./blog/*.md");
+const files = await Astro.glob("./*.md");
 const posts = files
   .map((file) => ({
     postName: file.getHeadings()[0].text,
     date: file.file
       .split("/")
-      .reduce((acc, curr) => curr, "") // last item in array
+      .reduce((_, curr) => curr, "") // last item in array
       .split("-")
       .slice(0, 3)
       .join("-"),
@@ -17,7 +17,7 @@ const posts = files
 ---
 
 <MainLayout>
-  <h2>Blog</h2>
+  <h2>Texts</h2>
   <p>Here are some posts I've written:</p>
 
   <ul>

@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/BlogLayout.astro"
+layout: "@layouts/TextsLayout.astro"
 ---
 
 <p align="center"><img src="https://github.com/ridulfo/nino-lang/raw/main/logo.png"/></p>

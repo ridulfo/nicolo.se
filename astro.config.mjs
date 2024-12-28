@@ -7,4 +7,7 @@ export default defineConfig({
       theme: "solarized-light",
     },
   },
+  build: {
+    format: "file",
+  },
 });
