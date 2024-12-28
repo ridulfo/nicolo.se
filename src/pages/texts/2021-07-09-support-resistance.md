@@ -53,7 +53,7 @@ mpf.plot(df[:200], type='candle')
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_3_1.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_3_1.png)
     
 
 
@@ -102,7 +102,7 @@ plt.show()
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_7_0.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_7_0.png)
     
 
 
@@ -234,7 +234,7 @@ plot_SR(df, volume_profile)
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_14_0.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_14_0.png)
     
 
 
@@ -268,7 +268,7 @@ plot_SR(df, k_means_all)
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_17_0.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_17_0.png)
     
 
 
@@ -298,7 +298,7 @@ plot_SR(df, k_means_reversals)
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_19_0.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_19_0.png)
     
 
 
@@ -322,7 +322,7 @@ plot_SR(df, count)
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_21_0.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_21_0.png)
     
 
 
@@ -353,7 +353,7 @@ plt.show()
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_23_0.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_23_0.png)
     
 
 
@@ -391,7 +391,7 @@ plot_SR(df, k_means_reversals_count)
 
 
     
-![png](../../assets/2021-07-09-Support-Resistance_files/2021-07-09-Support-Resistance_25_0.png)
+![png](../../assets/2021-07-09-support-resistance_files/2021-07-09-support-resistance_25_0.png)
     
 
 

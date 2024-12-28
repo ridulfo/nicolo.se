@@ -627,19 +627,19 @@ plt.show()
 
 
     
-![png](../../assets/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_0.png)
+![png](../../assets/2022-07-04-recipes-as-a-service_files/2022-07-04-recipes-as-a-service_27_0.png)
     
 
 
 
     
-![png](../../assets/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_1.png)
+![png](../../assets/2022-07-04-recipes-as-a-service_files/2022-07-04-recipes-as-a-service_27_1.png)
     
 
 
 
     
-![png](../../assets/2022-07-04-Recipes-as-a-Service_files/2022-07-04-Recipes-as-a-Service_27_2.png)
+![png](../../assets/2022-07-04-recipes-as-a-service_files/2022-07-04-recipes-as-a-service_27_2.png)
     
 
 
