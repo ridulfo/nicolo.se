@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/TextsLayout.astro"
+layout: "@layouts/WritingLayout.astro"
 ---
 
 # Classifying products according to UNSPSC using their descriptions

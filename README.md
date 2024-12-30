@@ -4,11 +4,11 @@ Suuuper fast personal website written in html by hand\*!
 The diagrams are [mermaid.js](https://mermaid.js.org/) diagrams and are built as svg to improve performance.
 
 ## Structure
-`src/pages` contains all the pages. The pages are either in that directory or the `/src/pages/texts` directory. The texts directory is for posts and the other directory is for pages that are not posts.
+`src/pages` contains all the pages. The pages are either in that directory or the `/src/pages/writing` directory. The writing directory is for posts and the other directory is for pages that are not posts.
 
 The images for the posts are kept in `assets/$(post_name)_files.
 
-## texts
+## writing
 
 ### Notebooks
 

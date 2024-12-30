@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/TextsLayout.astro"
+layout: "@layouts/WritingLayout.astro"
 ---
 
 # Making a fast website

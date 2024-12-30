@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/TextsLayout.astro"
+layout: "@layouts/WritingLayout.astro"
 ---
 
 # Unix-style AI programs
@@ -111,7 +111,7 @@ _(The output of `semgrep` which is piped into `ai` can be found above.)_
 **Summarize an article**
 
 ```
-> wget -qO- https://nicolo.se/texts/2023-11-24-my-note-taking-setup-2023-11.html | pandoc -f html -t markdown_github | ai -c 2048 "Summarize this article"
+> wget -qO- https://nicolo.se/writing/2023-11-24-my-note-taking-setup-2023-11.html | pandoc -f html -t markdown_github | ai -c 2048 "Summarize this article"
 
  This article tells the story of how the author lost notes saved in iCloud due to a git reset command being executed, leading them to re-evaluate their approach to note-taking and data backups. The new setup involves hosting their own git server on their home network, which they access using a VPN connection when away from home. They also use the Working Copy app on their iPhone for taking notes.
 

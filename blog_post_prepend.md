@@ -1,4 +1,4 @@
 ---
-layout: "@layouts/TextsLayout.astro"
+layout: "@layouts/WritingLayout.astro"
 ---
 

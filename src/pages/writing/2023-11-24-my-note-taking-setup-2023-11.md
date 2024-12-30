@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/TextsLayout.astro"
+layout: "@layouts/WritingLayout.astro"
 ---
 
 # My note-taking setup 2023-11

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 path_to_notebooks=_notebooks
-path_to_blog_posts=src/pages/texts
+path_to_blog_posts=src/pages/writing
 path_to_public_blog_posts=src/images
 
 # Compile all notebooks in notebooks/ to markdown in src/pages/blog/

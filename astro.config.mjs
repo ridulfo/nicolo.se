@@ -7,6 +7,11 @@ export default defineConfig({
       theme: "solarized-light",
     },
   },
+  redirects: {
+    "/blog": "/writing",
+    "/blog/": "/writing/",
+    "/blog/:slug": "/writing/:slug"
+  },
   build: {
     format: "file",
   },

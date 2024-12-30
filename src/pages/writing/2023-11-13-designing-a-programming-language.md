@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/TextsLayout.astro"
+layout: "@layouts/WritingLayout.astro"
 ---
 
 <p align="center"><img src="https://github.com/ridulfo/nino-lang/raw/main/logo.png"/></p>
