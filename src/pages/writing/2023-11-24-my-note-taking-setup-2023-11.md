@@ -53,4 +53,4 @@ The safety is built into the system using very simple mechanisms.
 
 One last neat thing! At the moment my NAS' purpose storing time machine backups and my notes. It only has one hard drive. Would it fail, everything would be lost. This does not worry me though. The data is distributed across my laptop and phone. 
 
-PS: I will by another hard drive for my NAS, I am just waiting for it to move up my priorities.
+PS: I will install another hard drive for my NAS, I am just waiting for it to rise to the top of my priorities.

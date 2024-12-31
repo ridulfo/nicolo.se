@@ -4,12 +4,12 @@ layout: "@layouts/WritingLayout.astro"
 
 # What makes a great manager
 
-What makes a person a great manager is difficult to distill into an article. It probably takes years of experience and dedication. Having had a really great one at my previous assignment, I wanted to share some of their characteristics which I admired.
+What makes a person a great manager is difficult to distill into an post. It takes years of experience and dedication. Having had a really great one at my previous assignment, I wanted to share some of their characteristics which I admired.
 
 ## No micromanagement 
-Does not feel the need to tell you how to do something. They trust that you, who works on this thing every day, will make a good call.
+They do not feel the need to tell you how to do something. They trust that you, who works on this thing every day, will make a good call.
 
-Does not stress you with deadlines. If a manager is stressing you, they probably do not understand the problem. They should instead try to understand what is making the delivery hard and make sure that you do not have any blockers.
+They do not stress you about deadlines. If a manager is stressing you, they probably do not understand the problem. They should instead try to understand what is making the delivery hard and make sure that you do not have any blockers.
 
 ## Goal oriented
 Does not have a personal agenda. Their agenda is the common goals and they know them by heart.
@@ -26,7 +26,7 @@ They ask for your input and care about your point of view.
 ## Does not use hierarchy
 They will not pull rank to justify a decision.
 
-Believes that everybody's view is equally important and they will make an effort to understand your point of view.
+They believe that everybody's view is equally important and they will make an effort to understand your point of view.
 
 Prefers team decisions over hierarchically based ones. The team should be responsible for their decisions and actions, not one single person.
 
