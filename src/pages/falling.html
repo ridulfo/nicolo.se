@@ -17,28 +17,44 @@
             width: 100%;
             height: 100%;
         }
+        #counter {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #00FF00;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <svg id="svgRoot" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div id="counter">30 FPS 0 Numbers</div>
 
     <script>
         (function() {
             const svg = document.getElementById('svgRoot');
+            const counter = document.getElementById('counter');
 
             let width = window.innerWidth;
             let height = window.innerHeight;
 
             svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
 
-            const fontSize = 24; 
-            const numberCount = Math.max(Math.min(2000,width*height*0.0005), 3000); 
+            const fontSize = 24;
+            const initialNumberCount = 1000;
             const numbers = [];
+            let lastTimestamp = 0;
+            let fps = 30;
+            let numberCount = initialNumberCount;
 
             function createNumber() {
                 const number = {
                     x: Math.random() * width,
-                    y: Math.random() * height,
+                    y: 0,
                     speed: 1 + Math.random() * 2,
                     rotate: Math.random() * 360,
                     element: null
@@ -59,37 +75,54 @@
                 return number;
             }
 
-            // Function to generate a random lighter green color
             function getRandomGreenColor() {
-    		const green = Math.floor(Math.random() * 100)+50; // Random green value between 0 and 100
-    		return `rgb(0, ${green}, 0)`;
-		}
-
-            for (let i = 0; i < numberCount; i++) {
-                const number = createNumber();
-                numbers.push(number);
+                const green = Math.floor(Math.random() * 100) + 50;
+                return `rgb(0, ${green}, 0)`;
             }
 
-            function animate() {
-                for (const number of numbers) {
+            function removeNumber(number) {
+                svg.removeChild(number.element);
+            }
+
+            let loopsMoreToGive = 0;
+            function animate(timestamp) {
+                if (lastTimestamp) {
+                    const deltaTime = timestamp - lastTimestamp;
+                    fps = 1000 / deltaTime;
+                    counter.textContent = `${Math.round(fps)} FPS ${numbers.length} Numbers`;
+
+                    if (fps > 30) {
+                        for(let i = 0; i<loopsMoreToGive;i++)
+                            numbers.push(createNumber()); // Add new numbers when FPS allows
+
+                        loopsMoreToGive++;
+                    } else {
+                        loopsMoreToGive=0;
+                    }
+                }
+                lastTimestamp = timestamp;
+
+                for (let i = numbers.length - 1; i >= 0; i--) {
+                    const number = numbers[i];
                     number.y += number.speed;
 
-                    // Reset number when it reaches the bottom
                     if (number.y > height) {
-                        number.y = 0;
-                        number.x = Math.random() * width; // New random horizontal position
-                        number.speed = 1 + Math.random() * 2; // Optional: New random speed
-                        number.rotate = Math.random() * 360; // New random rotation
-                        number.element.textContent = Math.floor(Math.random() * 10); // Optional: Change number
-                        number.element.setAttribute('fill', getRandomGreenColor()); // New random color
+                        removeNumber(number); // Remove numbers that have moved off-screen
+                        numbers.splice(i, 1);
+                    } else {
+                        number.element.setAttribute('x', number.x);
+                        number.element.setAttribute('y', number.y);
+                        number.element.setAttribute('transform', `rotate(${number.rotate}, ${number.x}, ${number.y})`);
                     }
-
-                    // Update position and rotation
-                    number.element.setAttribute('x', number.x);
-                    number.element.setAttribute('y', number.y);
-                    number.element.setAttribute('transform', `rotate(${number.rotate}, ${number.x}, ${number.y})`);
                 }
+
                 requestAnimationFrame(animate);
+            }
+
+            for (let i = 0; i < initialNumberCount; i++) {
+                const number = createNumber();
+                number.y = Math.random()*height;
+                numbers.push(number);
             }
 
             animate();
