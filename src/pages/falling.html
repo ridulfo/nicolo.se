@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Falling Numbers SVG with Rotation and Green Theme</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #003300; 
+        }
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <svg id="svgRoot" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    <script>
+        (function() {
+            const svg = document.getElementById('svgRoot');
+
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+
+            const fontSize = 24; 
+            const numberCount = Math.max(Math.min(2000,width*height*0.0005), 3000); 
+            const numbers = [];
+
+            function createNumber() {
+                const number = {
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    speed: 1 + Math.random() * 2,
+                    rotate: Math.random() * 360,
+                    element: null
+                };
+
+                const textElement = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                textElement.setAttribute('x', number.x);
+                textElement.setAttribute('y', number.y);
+                textElement.setAttribute('font-size', fontSize);
+                textElement.setAttribute('fill', getRandomGreenColor());
+                textElement.textContent = Math.floor(Math.random() * 10);
+
+                textElement.setAttribute('transform', `rotate(${number.rotate}, ${number.x}, ${number.y})`);
+
+                svg.appendChild(textElement);
+
+                number.element = textElement;
+                return number;
+            }
+
+            // Function to generate a random lighter green color
+            function getRandomGreenColor() {
+    		const green = Math.floor(Math.random() * 100)+50; // Random green value between 0 and 100
+    		return `rgb(0, ${green}, 0)`;
+		}
+
+            for (let i = 0; i < numberCount; i++) {
+                const number = createNumber();
+                numbers.push(number);
+            }
+
+            function animate() {
+                for (const number of numbers) {
+                    number.y += number.speed;
+
+                    // Reset number when it reaches the bottom
+                    if (number.y > height) {
+                        number.y = 0;
+                        number.x = Math.random() * width; // New random horizontal position
+                        number.speed = 1 + Math.random() * 2; // Optional: New random speed
+                        number.rotate = Math.random() * 360; // New random rotation
+                        number.element.textContent = Math.floor(Math.random() * 10); // Optional: Change number
+                        number.element.setAttribute('fill', getRandomGreenColor()); // New random color
+                    }
+
+                    // Update position and rotation
+                    number.element.setAttribute('x', number.x);
+                    number.element.setAttribute('y', number.y);
+                    number.element.setAttribute('transform', `rotate(${number.rotate}, ${number.x}, ${number.y})`);
+                }
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            window.addEventListener('resize', () => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            });
+
+        })();
+    </script>
+</body>
+</html>
