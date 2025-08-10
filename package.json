@@ -6,16 +6,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "bash build.sh && astro build && node inline-styles.mjs",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^11.4.2",
-    "astro": "^5.1.1",
-    "astro-single-file": "^1.1.0",
-    "globby": "^14.0.2",
-    "html-minifier": "^4.0.0",
-    "puppeteer": "^23.11.1"
+    "astro": "^5.12.9"
   }
 }
