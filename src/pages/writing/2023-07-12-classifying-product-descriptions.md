@@ -585,4 +585,3 @@ Only using a large language model (Open AI) approach was reasonably fast and ver
 Cleaning up the text before using the embedding approach improved the accuracy a lot. It was also fast and cheap. This is probably the best approach for this application.
 
 
-

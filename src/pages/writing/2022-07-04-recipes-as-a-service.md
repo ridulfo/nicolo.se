@@ -653,4 +653,3 @@ This notebook looked solely at different algorithm to find ingredients in common
 The only problem with the `group of groups` approach is that it is slow as it uses the brute force method to find small groups. This was mostly done for algorithm simplicity, but could easily be changed to a `pick one, then pick a similar one` approach.
 
 Further research will be conducted on methods for finding shared ingredients using other metrics.
-

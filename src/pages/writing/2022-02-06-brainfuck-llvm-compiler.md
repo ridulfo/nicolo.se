@@ -338,4 +338,3 @@ builder.asm(ir.FunctionType(ir.IntType(32),
 
 
 And that was pretty much it! The full code can be found in on my [github](https://github.com/ridulfo/BrainfuckLLVM). I hope you enjoyed this post!
-

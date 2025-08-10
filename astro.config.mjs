@@ -15,4 +15,10 @@ export default defineConfig({
   build: {
     format: "file",
   },
+  image: {
+    formats: ['webp', 'png'],
+    quality: {
+      webp: 80
+    }
+  }
 });

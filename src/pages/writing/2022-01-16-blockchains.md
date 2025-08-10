@@ -256,4 +256,3 @@ class K:
     @N
     def decode_block(block):A=block;B,E,F,G,H,I=D.unpack(f"=2I32s32sQ{C(A)-80}s",A);return B,E,F,G,H,I.decode()
 ```
-

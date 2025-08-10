@@ -396,9 +396,3 @@ plot_SR(df, k_means_reversals_count)
 
 
 # In the next post trendline finders will be created!
-
-
-```python
-
-```
-
