@@ -128,7 +128,7 @@ I went for 32GB of DDR5 RAM. From the `fastfetch` above you can see that I was o
 ### Secondary memory
 I thought that the SSD was crazy fast.
 
-```
+```bash
 > nix shell nixpkgs#fio --command fio --name=seq-test --ioengine=libaio --iodepth=1 --rw=readwrite --bs=1M --direct=1 --size=1G --numjobs=1 --runtime=60 --group_reporting --filename=/tmp/fio-seq-test
 ```
 
