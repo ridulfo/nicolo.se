@@ -14,7 +14,7 @@ layout: "@layouts/WritingLayout.astro"
 
 The internet has become heavier and heavier over the years. Developers pulling in random libraries and frameworks and not caring about the end user needing to download all that data. We need to return to simplicity.
 
-With this as my guiding principle, I set out to make my [personal website](https://nicolo.se) as light as possible - without sacrificing on the esthetics. I will be sharing my journey and the tools I used to achieve this goal.
+With this as my guiding principle, I set out to make my [personal website](https://nicolo.se) as light as possible - without sacrificing on the aesthetics. I will be sharing my journey and the tools I used to achieve this goal.
 
 **Disclaimer**: This blog is not optimized in any way yet. I am no role model (yet). I am just taking small steps to make it better.
 
@@ -81,7 +81,7 @@ The journey could end here. I was happy with the result. However, I wanted to se
 
 Initially I did not want to use any frameworks. I wanted to keep it as close to vanilla as possible. My requirements were simple:
 
-- No: shipping any javascript if the website was't interactive.
+- No: shipping any javascript if the website wasn't interactive.
 - No: a runtime
 - Yes: Server side rendering (SSR)
 - Yes: reusable components without the need for javascript
@@ -114,3 +114,9 @@ We can safely say that **any** client with using a recent browser can load this 
 By just taking a little bit of care and doing some optimizations it can make a huge difference in performance. This, without any impact on design, everything looks the same.
 
 This website is a candidate for the [10kb club](https://10kbclub.com/).
+
+### Addendum 2025-08-18
+
+Since this post was published I have changed to a more traditional, cache friendly solution that does not explicitly inline all css and assets into the documents. 
+For the css, Astro is smart enough to only inline css if it is small enough (<cite>Source: <a href="https://docs.astro.build/en/guides/styling/#bundle-control">Astro Docs</a> 2025-08-18</cite>).
+For the assets, Astro adds the `loading=lazy` property to the `img` tags, making the browser only download them as you are about to scroll them into view, further saving bandwidth. This simplified the building and deploying of this site.
