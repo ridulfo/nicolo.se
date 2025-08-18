@@ -2,9 +2,11 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   markdown: {
-    syntaxHighlight: "shiki",
     shikiConfig: {
-      theme: "solarized-light",
+      themes: {
+        light: "github-light",
+        dark: "github-dark",
+      },
     },
   },
   redirects: {

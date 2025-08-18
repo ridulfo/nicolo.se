@@ -28,8 +28,8 @@ const { title = "nicolo.se", titleLink = "/" } = Astro.props;
     font-weight: 300;
     font-size: 1rem;
 
-    background-color: #fbf5e6;
-    color: #4b4f4b;
+    background-color: #fdf7e9;
+    color: #3c3836;
   }
   main {
     max-width: 38rem;
@@ -42,25 +42,64 @@ const { title = "nicolo.se", titleLink = "/" } = Astro.props;
     border-collapse: collapse;
     width: 100%;
     overflow: auto;
-    border-top-color: gray;
+    border-top-color: #928374;
     text-indent: initial;
   }
   table th,
   table tr td {
     padding: 0.5rem 1rem;
-    border: 1px solid #dfe2e5;
+    border: 1px solid #928374;
   }
   tr:nth-child(2n) {
-    background-color: #f6f8fa50;
+    background-color: #ebdbb250;
   }
   table tr {
-    background-color: #ffffff50;
+    background-color: #fbf1c750;
   }
   a {
     color: #548153;
   }
   pre {
-    border: 1px solid #dfe2e5;
+    border: 1px solid #928374;
     padding: 1rem;
+  }
+  
+  .astro-code {
+    background-color: #fdf7e9 !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #282828;
+      color: #ebdbb2;
+    }
+    table {
+      border-top-color: #928374;
+    }
+    table th,
+    table tr td {
+      border: 1px solid #928374;
+    }
+    tr:nth-child(2n) {
+      background-color: #3c383650;
+    }
+    table tr {
+      background-color: #28282850;
+    }
+    a {
+      color: #6ea76d;
+    }
+    
+    .astro-code {
+      background-color: #282828 !important;
+    }
+    
+    .astro-code,
+    .astro-code span {
+      color: var(--shiki-dark) !important;
+      font-style: var(--shiki-dark-font-style) !important;
+      font-weight: var(--shiki-dark-font-weight) !important;
+      text-decoration: var(--shiki-dark-text-decoration) !important;
+    }
   }
 </style>
